@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,12 @@
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body id="arriba">
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
 <header class="cabecera">
-  <a href="index.html" class="marca"><img src="bandera-ue.svg"> <span>UE Decide 2026</span></a>
-  <nav>
+  <a href="index.html" class="marca"><img src="bandera-ue.svg" alt="Bandera de la Unión Europea" width="60" height="40"> <span>UE Decide 2026</span></a>
+  <nav aria-label="Navegación principal">
     <ul class="menu">
-      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
       <li><a href="decisiones.html">Las 100 decisiones</a></li>
       <li><a href="grupos.html">Grupos políticos</a></li>
       <li><a href="espanoles.html">Eurodiputados españoles</a></li>
@@ -28,7 +29,7 @@
 </section>
 
 <section>
-  <h4>¿Quién decide en la Unión Europea?</h4>
+  <h2>¿Quién decide en la Unión Europea?</h2>
   <div class="dos-columnas">
     <div>
       <p>En la UE ninguna institución decide sola. Las leyes siguen un reparto de poder entre varias instituciones:</p>
@@ -41,14 +42,14 @@
       </ul>
     </div>
     <figure>
-      <img src="instituciones.svg" class="ancho">
+      <img src="instituciones.svg" alt="Esquema: la Comisión Europea propone; el Parlamento Europeo y el Consejo de la UE negocian y aprueban la ley" width="700" height="330" loading="lazy" class="ancho">
       <figcaption>El «triángulo institucional» del procedimiento legislativo ordinario.</figcaption>
     </figure>
   </div>
 </section>
 
 <section>
-  <h4>¿Cómo se aprueba una ley europea?</h4>
+  <h2>¿Cómo se aprueba una ley europea?</h2>
   <ol>
     <li>La Comisión Europea presenta una propuesta.</li>
     <li>Una comisión parlamentaria la estudia y nombra a un ponente que redacta un informe.</li>
@@ -58,20 +59,31 @@
   </ol>
 </section>
 
+<section class="caja-destacada" aria-labelledby="como-leer">
+  <h2 id="como-leer">Cómo leer una ficha de votación</h2>
+  <p>Cada una de las 100 decisiones tiene su propia ficha. Así puedes interpretarla:</p>
+  <dl class="glosario">
+    <dt>A favor / En contra / Abstención</dt><dd>Lo que votó cada eurodiputado presente en el pleno.</dd>
+    <dt>No votó</dt><dd>El eurodiputado no participó en esa votación (ausente o no pulsó el botón).</dd>
+    <dt>Quién decide</dt><dd>Indica qué instituciones tienen la última palabra según el tipo de procedimiento.</dd>
+    <dt>Documentos</dt><dd>Enlaces al informe o propuesta votada, al texto aprobado y a la ficha oficial del procedimiento.</dd>
+  </dl>
+  <img src="votacion-censura.svg" alt="Gráfico de barras de la moción de censura del 22 de enero de 2026: 165 a favor, 390 en contra y 10 abstenciones" width="700" height="230" loading="lazy" class="ancho">
+</section>
 <section>
-  <h4>Tipos de decisión y quién tiene la última palabra</h4>
+  <h2>Tipos de decisión y quién tiene la última palabra</h2>
   <table class="tabla">
-    
-    <thead><tr><th>Procedimiento</th><th>Quién decide</th><th>Decisiones</th></tr></thead>
+    <caption>Procedimientos de las 100 decisiones seleccionadas</caption>
+    <thead><tr><th scope="col">Procedimiento</th><th scope="col">Quién decide</th><th scope="col">Decisiones</th></tr></thead>
     <tbody><tr><td>Procedimiento legislativo ordinario</td><td>Propone la Comisión Europea; deciden juntos el Parlamento Europeo y el Consejo de la UE (ministros de los 27).</td><td>42</td></tr><tr><td>Informe de propia iniciativa</td><td>Decide el Parlamento Europeo. Es una posición política, no una ley obligatoria.</td><td>27</td></tr><tr><td>Resolución del Parlamento</td><td>Decide el Parlamento Europeo. Expresa su posición política sobre un tema de actualidad.</td><td>7</td></tr><tr><td>Acto no legislativo / acuerdo internacional</td><td>Negocia la Comisión; firma y decide el Consejo de la UE con la aprobación del Parlamento Europeo.</td><td>5</td></tr><tr><td>Iniciativa legislativa del Parlamento</td><td>El Parlamento Europeo pide a la Comisión que presente una propuesta de ley.</td><td>4</td></tr><tr><td>Procedimiento presupuestario</td><td>Deciden el Parlamento Europeo y el Consejo de la UE, que juntos forman la autoridad presupuestaria.</td><td>4</td></tr><tr><td>Procedimiento de consulta</td><td>Propone la Comisión; decide el Consejo de la UE tras recibir el dictamen (no vinculante) del Parlamento.</td><td>3</td></tr><tr><td>Objeción a un acto delegado</td><td>La Comisión adopta el acto; el Parlamento Europeo (o el Consejo) puede vetarlo.</td><td>2</td></tr><tr><td>Procedimiento de aprobación</td><td>Decide el Consejo de la UE, pero necesita la aprobación del Parlamento Europeo.</td><td>2</td></tr><tr><td>Moción de censura</td><td>Decide el Parlamento Europeo. Necesita dos tercios de los votos emitidos y la mayoría de los eurodiputados para destituir a la Comisión.</td><td>1</td></tr><tr><td>Acuerdo interinstitucional</td><td>Lo pactan y aprueban el Parlamento Europeo y la Comisión Europea.</td><td>1</td></tr><tr><td>Procedimiento presupuestario interno</td><td>Decide el Parlamento Europeo sobre su propio presupuesto o sus orientaciones.</td><td>1</td></tr><tr><td>Aprobación de la gestión</td><td>Decide el Parlamento Europeo si aprueba cómo se gastó el presupuesto de la UE.</td><td>1</td></tr></tbody>
   </table>
 </section>
 
 <section>
-  <h4>2026 en cifras</h4>
+  <h2>2026 en cifras</h2>
   <table class="tabla">
-    
-    <thead><tr><th>Dato</th><th>Valor</th></tr></thead>
+    <caption>Resumen de las 100 decisiones seleccionadas</caption>
+    <thead><tr><th scope="col">Dato</th><th scope="col">Valor</th></tr></thead>
     <tbody>
       <tr><td>Decisiones analizadas</td><td>100</td></tr>
       <tr><td>Aprobadas</td><td>93</td></tr>
@@ -80,24 +92,24 @@
       <tr><td>Mayor consenso</td><td><a href="m090.html">Cumplimiento de los derechos de los pasajeros</a> (652 a favor, 2 en contra)</td></tr>
     </tbody>
   </table>
-  <h5>Temas de las decisiones</h5>
+  <h3>Temas de las decisiones</h3>
   <ul class="columnas"><li><strong>Exteriores y defensa</strong>: 12 decisiones</li><li><strong>Clima y medio ambiente</strong>: 10 decisiones</li><li><strong>Economía</strong>: 9 decisiones</li><li><strong>Instituciones</strong>: 9 decisiones</li><li><strong>Presupuesto</strong>: 8 decisiones</li><li><strong>Salud</strong>: 7 decisiones</li><li><strong>Comercio</strong>: 6 decisiones</li><li><strong>Digital</strong>: 6 decisiones</li><li><strong>Empleo y social</strong>: 5 decisiones</li><li><strong>Derechos humanos</strong>: 5 decisiones</li><li><strong>Migración</strong>: 5 decisiones</li><li><strong>Ucrania</strong>: 5 decisiones</li><li><strong>Agricultura y pesca</strong>: 5 decisiones</li><li><strong>Justicia e interior</strong>: 4 decisiones</li><li><strong>Transporte</strong>: 3 decisiones</li><li><strong>Educación y juventud</strong>: 1 decisiones</li></ul>
 </section>
 
 <section>
-  <h4>Fuentes oficiales</h4>
+  <h2>Fuentes oficiales</h2>
   <ul>
-    <li><a href="https://www.europarl.europa.eu/portal/es" target="_blank" rel="noopener">Parlamento: aquí</a></li>
-    <li><a href="https://www.consilium.europa.eu/es/" target="_blank" rel="noopener">Consejo: aquí</a></li>
-    <li><a href="https://commission.europa.eu/index_es" target="_blank" rel="noopener">Comisión: aquí</a></li>
-    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/es/" target="_blank" rel="noopener">OEIL: aquí</a></li>
-    <li><a href="https://howtheyvote.eu" target="_blank" rel="noopener">Más información</a></li>
+    <li><a href="https://www.europarl.europa.eu/portal/es" target="_blank" rel="noopener">Parlamento Europeo</a></li>
+    <li><a href="https://www.consilium.europa.eu/es/" target="_blank" rel="noopener">Consejo de la UE y Consejo Europeo</a></li>
+    <li><a href="https://commission.europa.eu/index_es" target="_blank" rel="noopener">Comisión Europea</a></li>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/es/" target="_blank" rel="noopener">Observatorio Legislativo (OEIL)</a></li>
+    <li><a href="https://howtheyvote.eu" target="_blank" rel="noopener">HowTheyVote.eu: votaciones nominales</a></li>
   </ul>
 </section>
 
 </main>
 <footer>
-  <a href="#arriba" class="subir"><img src="bandera-ue.svg" width="30"></a>
+  <a href="#arriba" class="subir">Volver arriba ↑</a>
   <h2>Créditos y licencias</h2>
   <ul>
     <li>Datos de votaciones: <a href="https://howtheyvote.eu" target="_blank" rel="noopener">HowTheyVote.eu (Open Database License, ODbL)</a>, a partir de los resultados oficiales del Parlamento Europeo.</li>

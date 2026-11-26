@@ -1,67 +1,181 @@
-/* Estilos generados por la IA (versión inicial) */
+/* =========================================================
+   UE Decide 2026 - hoja de estilos única
+   Versión 2: corregida y modificada a mano por el equipo
+   ========================================================= */
+
+/* 1. Paleta de colores con variables CSS (intervención manual) */
+:root {
+  --azul-ue: #003399;
+  --azul-oscuro: #001f5c;
+  --amarillo-ue: #ffcc00;
+  --fondo: #ffffff;
+  --fondo-suave: #f4f6fb;
+  --texto: #1a1a1a;
+  --texto-secundario: #4a4a4a;
+  --borde: #d0d6e2;
+  --verde: #1c6e3d;
+  --rojo: #a3123a;
+  --gris: #555555;
+  --foco: #ffcc00;
+  --radio: 8px;
+  --sombra: 0 2px 8px rgba(0, 31, 92, 0.15);
+}
+
 * { box-sizing: border-box; }
-*:focus { outline: none; }
 
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  color: #8a8a8a;
-  background: #ffffff;
-  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
 }
 
+/* 2. Foco visible para navegar con teclado (corrección de accesibilidad) */
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--azul-oscuro);
+  border-radius: 2px;
+}
+
+.saltar {
+  position: absolute;
+  left: 10px;
+  top: -60px;
+  background: var(--amarillo-ue);
+  color: var(--azul-oscuro);
+  padding: 10px 16px;
+  font-weight: bold;
+  z-index: 10;
+  border-radius: var(--radio);
+}
+.saltar:focus { top: 10px; }
+
+/* Cabecera y menú */
 .cabecera {
-  background: #2b4fa8;
+  background: var(--azul-ue);
   padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
-.marca { color: #ffd966; text-decoration: none; font-size: 22px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
-.marca img { width: 60px; }
-.menu { list-style: none; display: flex; gap: 5px; margin: 0; padding: 0; flex-wrap: wrap; }
-.menu a { color: #8fa8e0; text-decoration: none; padding: 8px 12px; font-size: 14px; }
-.menu a:hover { text-decoration: underline; }
-.menu a.activo { color: #ffd966; }
+.marca { color: #ffffff; text-decoration: none; font-size: 22px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+.marca img { height: 40px; width: auto; }
+.menu { list-style: none; display: flex; gap: 6px; margin: 0; padding: 0; flex-wrap: wrap; }
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+.menu a:hover { background: #ffffff; color: var(--azul-ue); }
+.menu a.activo { border-color: var(--amarillo-ue); color: var(--amarillo-ue); }
+.menu a.activo:hover { color: var(--azul-ue); }
 
 main { max-width: 1100px; margin: 0 auto; padding: 20px; }
-h1 { color: #2b4fa8; font-size: 34px; }
-h4 { color: #2b4fa8; font-size: 24px; margin-bottom: 8px; }
-h5 { font-size: 18px; color: #999; }
-a { color: #6b9bff; }
+h1 { color: var(--azul-ue); font-size: 2.1rem; line-height: 1.25; }
+h2 { color: var(--azul-ue); font-size: 1.5rem; margin-bottom: 8px; border-left: 6px solid var(--amarillo-ue); padding-left: 10px; }
+h3 { font-size: 1.1rem; color: var(--azul-oscuro); }
+a { color: #0645ad; }
+a:hover { color: var(--azul-oscuro); }
 
-.portada { background: #eef2fb; padding: 30px; border-radius: 8px; }
-.entradilla { font-size: 18px; color: #a0a0a0; }
+.portada { background: var(--fondo-suave); padding: 30px; border-radius: var(--radio); }
+.entradilla { font-size: 1.15rem; color: var(--texto-secundario); }
 
-.boton { display: inline-block; background: #ffcc00; color: #ffffff; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; cursor: pointer; }
-.boton:hover { background: #ffd633; }
-.boton.secundario { background: #7fa0e8; }
+/* 3. Botones con nuevo efecto hover (intervención manual) */
+.boton {
+  display: inline-block;
+  background: var(--amarillo-ue);
+  color: var(--azul-oscuro);
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 2px solid var(--amarillo-ue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 4px 0;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.boton:hover {
+  background: var(--azul-oscuro);
+  color: var(--amarillo-ue);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+.boton.secundario { background: transparent; border-color: var(--azul-ue); color: var(--azul-ue); }
+.boton.secundario:hover { background: var(--azul-ue); color: #ffffff; }
 
-.dos-columnas { display: flex; gap: 20px; }
+.dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; }
+figure { margin: 0; }
 .ancho { width: 100%; height: auto; }
-figcaption { font-size: 13px; color: #b5b5b5; }
+figcaption { font-size: 0.9rem; color: var(--texto-secundario); }
 
-.tabla { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
-.tabla th { background: #2b4fa8; color: #9fb4e6; padding: 8px; text-align: left; }
-.tabla td { border-bottom: 1px solid #eee; padding: 8px; }
-.res.aprobada { color: #7ccf8a; font-weight: bold; }
-.res.rechazada { color: #ff9a9a; font-weight: bold; }
+/* Nueva sección creada desde cero */
+.caja-destacada { background: var(--fondo-suave); border: 2px solid var(--borde); border-radius: var(--radio); padding: 10px 24px 20px; margin: 30px 0; }
+.glosario dt { font-weight: bold; color: var(--azul-oscuro); margin-top: 10px; }
+.glosario dd { margin-left: 0; margin-bottom: 6px; }
+
+/* 4. Tablas reestructuradas (intervención manual) */
+.tabla-scroll { overflow-x: auto; }
+.tabla { width: 100%; border-collapse: collapse; margin: 10px 0 20px; font-size: 0.95rem; }
+.tabla caption { text-align: left; font-weight: bold; padding: 6px 0; color: var(--texto-secundario); }
+.tabla thead th { background: var(--azul-ue); color: #ffffff; padding: 10px 8px; text-align: left; position: sticky; top: 0; }
+.tabla td, .tabla tbody th { border-bottom: 1px solid var(--borde); padding: 8px; text-align: left; font-weight: normal; vertical-align: top; }
+.tabla tbody tr:nth-child(even) { background: var(--fondo-suave); }
+.tabla tbody tr:hover { background: #fff6cc; }
+.tabla .num { text-align: right; font-variant-numeric: tabular-nums; }
+.tabla-decisiones tbody th a { font-weight: bold; }
+.tema { display: block; font-size: 0.8rem; color: var(--texto-secundario); }
+
+.res { display: inline-block; padding: 2px 10px; border-radius: 12px; font-weight: bold; font-size: 0.85rem; color: #ffffff; }
+.res.aprobada { background: var(--verde); }
+.res.rechazada { background: var(--rojo); }
 .columnas { columns: 2; }
 
-.indice-meses { background: #f5f5f5; padding: 5px 15px; }
-.barra { display: flex; height: 26px; background: #eee; margin: 10px 0; }
-.b-favor { background: #7ccf8a; } .b-contra { background: #ff9a9a; } .b-abst { background: #ccc; }
-.bloques { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-.bloque-voto { background: #fafafa; padding: 10px; font-size: 14px; }
-.partido { color: #c0c0c0; }
-.paginacion { display: flex; justify-content: space-between; margin-top: 30px; font-size: 14px; }
-.migas { font-size: 13px; }
+.indice-meses { background: var(--fondo-suave); padding: 5px 15px; border-radius: var(--radio); }
+.indice-meses a { display: inline-block; padding: 4px 2px; }
+.barra { display: flex; height: 26px; background: #e5e5e5; margin: 10px 0; border-radius: 13px; overflow: hidden; }
+.b-favor { background: var(--verde); } .b-contra { background: var(--rojo); } .b-abst { background: var(--gris); }
+.datos-clave { list-style: none; padding: 0; }
+.datos-clave li { padding: 3px 0; }
 
-.formulario input, .formulario select, .formulario textarea { display: block; margin: 8px 0; padding: 8px; border: 1px solid #eee; color: #bbb; }
-.formulario input[type=radio], .formulario input[type=checkbox] { display: inline; }
+.bloques { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+.bloque-voto { background: var(--fondo-suave); padding: 10px 16px; border-radius: var(--radio); border-top: 5px solid var(--gris); font-size: 0.95rem; }
+.voto-for { border-top-color: var(--verde); }
+.voto-against { border-top-color: var(--rojo); }
+.bloque-voto h3 { margin-top: 6px; }
+.partido { color: var(--texto-secundario); }
+.paginacion { display: flex; justify-content: space-between; gap: 20px; margin-top: 30px; }
+.migas { font-size: 0.9rem; }
 
-footer { background: #f0f0f0; color: #b0b0b0; padding: 20px 30px; font-size: 13px; margin-top: 40px; }
-footer h2 { font-size: 16px; color: #aaa; }
-footer a { color: #9ab8ff; }
-.subir img { width: 30px; }
+/* Formulario */
+.formulario { max-width: 650px; }
+.formulario fieldset { border: 2px solid var(--borde); border-radius: var(--radio); margin-bottom: 18px; padding: 10px 18px; }
+.formulario legend { font-weight: bold; color: var(--azul-oscuro); padding: 0 6px; }
+.formulario label { display: block; font-weight: bold; margin-bottom: 4px; }
+.formulario input[type=text], .formulario input[type=email], .formulario input[type=number], .formulario select, .formulario textarea {
+  width: 100%; padding: 10px; border: 2px solid #767676; border-radius: 6px; font-size: 1rem; color: var(--texto); font-family: inherit;
+}
+.formulario .opcion { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.formulario .opcion label { display: inline; font-weight: normal; margin: 0; }
+.formulario input[type=radio], .formulario input[type=checkbox] { width: 20px; height: 20px; accent-color: var(--azul-ue); }
+
+footer { background: var(--azul-oscuro); color: #ffffff; padding: 20px 30px; font-size: 0.9rem; margin-top: 40px; }
+footer h2 { font-size: 1.1rem; color: #ffffff; border-left-color: var(--amarillo-ue); }
+footer a { color: #ffe680; }
+.subir { font-weight: bold; }
+
+/* Móvil */
+@media (max-width: 700px) {
+  .dos-columnas { grid-template-columns: 1fr; }
+  .columnas { columns: 1; }
+  .cabecera { padding: 10px 15px; }
+  h1 { font-size: 1.6rem; }
+}
