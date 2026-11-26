@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,13 @@
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body id="arriba">
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
 <header class="cabecera">
-  <a href="index.html" class="marca"><img src="bandera-ue.svg"> <span>UE Decide 2026</span></a>
-  <nav>
+  <a href="index.html" class="marca"><img src="bandera-ue.svg" alt="Bandera de la Unión Europea" width="60" height="40"> <span>UE Decide 2026</span></a>
+  <nav aria-label="Navegación principal">
     <ul class="menu">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="decisiones.html" class="activo">Las 100 decisiones</a></li>
+      <li><a href="decisiones.html" class="activo" aria-current="page">Las 100 decisiones</a></li>
       <li><a href="grupos.html">Grupos políticos</a></li>
       <li><a href="espanoles.html">Eurodiputados españoles</a></li>
       <li><a href="participa.html">Participa</a></li>
@@ -32,48 +33,48 @@
 </ul>
 
 <section>
-  <h4>¿Quién toma esta decisión?</h4>
+  <h2>¿Quién toma esta decisión?</h2>
   <p><strong>Moción de censura.</strong> Decide el Parlamento Europeo. Necesita dos tercios de los votos emitidos y la mayoría de los eurodiputados para destituir a la Comisión.</p>
   <p>Esta página recoge el voto del <strong>pleno del Parlamento Europeo</strong>.</p>
 </section>
 
 <section>
-  <h4>Resultado de la votación</h4>
-  <div class="barra">
+  <h2>Resultado de la votación</h2>
+  <div class="barra" role="img" aria-label="29% a favor, 69% en contra, 2% abstención">
     <span class="b-favor" style="width:29%"></span><span class="b-contra" style="width:69%"></span><span class="b-abst" style="width:2%"></span>
   </div>
   <table class="tabla">
-    
-    <thead><tr><th>A favor</th><th>En contra</th><th>Abstención</th><th>No votaron</th></tr></thead>
+    <caption>Votos del pleno</caption>
+    <thead><tr><th scope="col">A favor</th><th scope="col">En contra</th><th scope="col">Abstención</th><th scope="col">No votaron</th></tr></thead>
     <tbody><tr><td class="num">165</td><td class="num">390</td><td class="num">10</td><td class="num">154</td></tr></tbody>
   </table>
 </section>
 
 <section>
-  <h4>Votos por grupo político</h4>
+  <h2>Votos por grupo político</h2>
   <div class="tabla-scroll">
   <table class="tabla">
-    
-    <thead><tr><th>Grupo</th><th>A favor</th><th>En contra</th><th>Abst.</th><th>No votó</th><th>Posición mayoritaria</th></tr></thead>
-    <tbody><tr><td>La Izquierda</td><td class="num">8</td><td class="num">0</td><td class="num">3</td><td class="num">35</td><td>A favor</td></tr><tr><td>S&amp;D</td><td class="num">2</td><td class="num">98</td><td class="num">0</td><td class="num">36</td><td>En contra</td></tr><tr><td>Verdes/ALE</td><td class="num">0</td><td class="num">43</td><td class="num">0</td><td class="num">10</td><td>En contra</td></tr><tr><td>Renew</td><td class="num">2</td><td class="num">59</td><td class="num">2</td><td class="num">12</td><td>En contra</td></tr><tr><td>PPE</td><td class="num">1</td><td class="num">159</td><td class="num">4</td><td class="num">23</td><td>En contra</td></tr><tr><td>ECR</td><td class="num">32</td><td class="num">27</td><td class="num">1</td><td class="num">19</td><td>A favor</td></tr><tr><td>PfE</td><td class="num">73</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td>A favor</td></tr><tr><td>ESN</td><td class="num">25</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td>A favor</td></tr><tr><td>NI</td><td class="num">22</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>A favor</td></tr></tbody>
+    <caption>Votos de cada grupo político del Parlamento Europeo</caption>
+    <thead><tr><th scope="col">Grupo</th><th scope="col">A favor</th><th scope="col">En contra</th><th scope="col">Abst.</th><th scope="col">No votó</th><th scope="col">Posición mayoritaria</th></tr></thead>
+    <tbody><tr><th scope="row">La Izquierda</th><td class="num">8</td><td class="num">0</td><td class="num">3</td><td class="num">35</td><td>A favor</td></tr><tr><th scope="row">S&amp;D</th><td class="num">2</td><td class="num">98</td><td class="num">0</td><td class="num">36</td><td>En contra</td></tr><tr><th scope="row">Verdes/ALE</th><td class="num">0</td><td class="num">43</td><td class="num">0</td><td class="num">10</td><td>En contra</td></tr><tr><th scope="row">Renew</th><td class="num">2</td><td class="num">59</td><td class="num">2</td><td class="num">12</td><td>En contra</td></tr><tr><th scope="row">PPE</th><td class="num">1</td><td class="num">159</td><td class="num">4</td><td class="num">23</td><td>En contra</td></tr><tr><th scope="row">ECR</th><td class="num">32</td><td class="num">27</td><td class="num">1</td><td class="num">19</td><td>A favor</td></tr><tr><th scope="row">PfE</th><td class="num">73</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td>A favor</td></tr><tr><th scope="row">ESN</th><td class="num">25</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td>A favor</td></tr><tr><th scope="row">NI</th><td class="num">22</td><td class="num">4</td><td class="num">0</td><td class="num">4</td><td>A favor</td></tr></tbody>
   </table>
   </div>
 </section>
 
 <section>
-  <h4>Qué votaron los eurodiputados españoles</h4>
-  <div class="bloques"><div class="bloque-voto voto-for"><h5>A favor (6)</h5><ul><li>Hermann Tertsch <span class="partido">(VOX, PfE)</span></li><li>Jorge Buxadé Villalba <span class="partido">(VOX, PfE)</span></li><li>Jorge Martín Frías <span class="partido">(VOX, PfE)</span></li><li>Juan Carlos Girauta Vidal <span class="partido">(VOX, PfE)</span></li><li>Margarita De La Pisa Carrión <span class="partido">(VOX, PfE)</span></li><li>Mireia Borrás Pabón <span class="partido">(VOX, PfE)</span></li></ul></div><div class="bloque-voto voto-against"><h5>En contra (38)</h5><ul><li>Diana Riba I Giner <span class="partido">(ERC, Verdes/ALE)</span></li><li>Oihane Agirregoitia Martínez <span class="partido">(PNV, Renew)</span></li><li>Adrián Vázquez Lázara <span class="partido">(PP, PPE)</span></li><li>Antonio López-Istúriz White <span class="partido">(PP, PPE)</span></li><li>Borja Giménez Larraz <span class="partido">(PP, PPE)</span></li><li>Carmen Crespo Díaz <span class="partido">(PP, PPE)</span></li><li>Dolors Montserrat <span class="partido">(PP, PPE)</span></li><li>Elena Nevado Del Campo <span class="partido">(PP, PPE)</span></li><li>Esteban González Pons <span class="partido">(PP, PPE)</span></li><li>Esther Herranz García <span class="partido">(PP, PPE)</span></li><li>Fernando Navarrete Rojas <span class="partido">(PP, PPE)</span></li><li>Francisco José Millán Mon <span class="partido">(PP, PPE)</span></li><li>Gabriel Mato <span class="partido">(PP, PPE)</span></li><li>Isabel Benjumea Benjumea <span class="partido">(PP, PPE)</span></li><li>Javier Zarzalejos <span class="partido">(PP, PPE)</span></li><li>Juan Ignacio Zoido Álvarez <span class="partido">(PP, PPE)</span></li><li>Maravillas Abadía Jover <span class="partido">(PP, PPE)</span></li><li>Nicolás Pascual De La Parte <span class="partido">(PP, PPE)</span></li><li>Pablo Arias Echeverría <span class="partido">(PP, PPE)</span></li><li>Pilar Del Castillo Vera <span class="partido">(PP, PPE)</span></li><li>Raúl De La Hoz Quintano <span class="partido">(PP, PPE)</span></li><li>Rosa Estaràs Ferragut <span class="partido">(PP, PPE)</span></li><li>Susana Solís Pérez <span class="partido">(PP, PPE)</span></li><li>Alicia Homs Ginel <span class="partido">(PSOE, S&amp;D)</span></li><li>Cristina Maestre <span class="partido">(PSOE, S&amp;D)</span></li><li>César Luena <span class="partido">(PSOE, S&amp;D)</span></li><li>Elena Sancho Murillo <span class="partido">(PSOE, S&amp;D)</span></li><li>Hana Jalloul Muro <span class="partido">(PSOE, S&amp;D)</span></li><li>Idoia Mendia <span class="partido">(PSOE, S&amp;D)</span></li><li>Javier Moreno Sánchez <span class="partido">(PSOE, S&amp;D)</span></li><li>Jonás Fernández <span class="partido">(PSOE, S&amp;D)</span></li><li>José Cepeda <span class="partido">(PSOE, S&amp;D)</span></li><li>Juan Fernando López Aguilar <span class="partido">(PSOE, S&amp;D)</span></li><li>Leire Pajín <span class="partido">(PSOE, S&amp;D)</span></li><li>Marcos Ros Sempere <span class="partido">(PSOE, S&amp;D)</span></li><li>Nicolás González Casares <span class="partido">(PSOE, S&amp;D)</span></li><li>Rosa Serrano Sierra <span class="partido">(PSOE, S&amp;D)</span></li><li>Sandra Gómez López <span class="partido">(PSOE, S&amp;D)</span></li></ul></div><div class="bloque-voto voto-abstention"><h5>Abstención (0)</h5><ul><li>Ninguno</li></ul></div><div class="bloque-voto voto-did_not_vote"><h5>No votó (16)</h5><ul><li>Ana Miranda Paz <span class="partido">(BNG, Verdes/ALE)</span></li><li>Vicent Marzà Ibáñez <span class="partido">(Compromís, Verdes/ALE)</span></li><li>Pernando Barrena Arza <span class="partido">(EH BILDU, La Izquierda)</span></li><li>Diego Solier <span class="partido">(Independiente, ECR)</span></li><li>Nora Junco García <span class="partido">(Independiente, ECR)</span></li><li>Irene Montero <span class="partido">(PODEMOS, La Izquierda)</span></li><li>Isabel Serra Sánchez <span class="partido">(PODEMOS, La Izquierda)</span></li><li>Alma Ezcurra Almansa <span class="partido">(PP, PPE)</span></li><li>Javi López <span class="partido">(PSC-PSOE, S&amp;D)</span></li><li>Laura Ballarín Cereza <span class="partido">(PSC-PSOE, S&amp;D)</span></li><li>Iratxe García Pérez <span class="partido">(PSOE, S&amp;D)</span></li><li>Lina Gálvez <span class="partido">(PSOE, S&amp;D)</span></li><li>Nacho Sánchez Amor <span class="partido">(PSOE, S&amp;D)</span></li><li>Alvise Pérez <span class="partido">(SALF, NI)</span></li><li>Estrella Galán <span class="partido">(SMR, La Izquierda)</span></li><li>Jaume Asens Llodrà <span class="partido">(SMR, Verdes/ALE)</span></li></ul></div></div>
+  <h2>Qué votaron los eurodiputados españoles</h2>
+  <div class="bloques"><div class="bloque-voto voto-for"><h3>A favor (6)</h3><ul><li>Hermann Tertsch <span class="partido">(VOX, PfE)</span></li><li>Jorge Buxadé Villalba <span class="partido">(VOX, PfE)</span></li><li>Jorge Martín Frías <span class="partido">(VOX, PfE)</span></li><li>Juan Carlos Girauta Vidal <span class="partido">(VOX, PfE)</span></li><li>Margarita De La Pisa Carrión <span class="partido">(VOX, PfE)</span></li><li>Mireia Borrás Pabón <span class="partido">(VOX, PfE)</span></li></ul></div><div class="bloque-voto voto-against"><h3>En contra (38)</h3><ul><li>Diana Riba I Giner <span class="partido">(ERC, Verdes/ALE)</span></li><li>Oihane Agirregoitia Martínez <span class="partido">(PNV, Renew)</span></li><li>Adrián Vázquez Lázara <span class="partido">(PP, PPE)</span></li><li>Antonio López-Istúriz White <span class="partido">(PP, PPE)</span></li><li>Borja Giménez Larraz <span class="partido">(PP, PPE)</span></li><li>Carmen Crespo Díaz <span class="partido">(PP, PPE)</span></li><li>Dolors Montserrat <span class="partido">(PP, PPE)</span></li><li>Elena Nevado Del Campo <span class="partido">(PP, PPE)</span></li><li>Esteban González Pons <span class="partido">(PP, PPE)</span></li><li>Esther Herranz García <span class="partido">(PP, PPE)</span></li><li>Fernando Navarrete Rojas <span class="partido">(PP, PPE)</span></li><li>Francisco José Millán Mon <span class="partido">(PP, PPE)</span></li><li>Gabriel Mato <span class="partido">(PP, PPE)</span></li><li>Isabel Benjumea Benjumea <span class="partido">(PP, PPE)</span></li><li>Javier Zarzalejos <span class="partido">(PP, PPE)</span></li><li>Juan Ignacio Zoido Álvarez <span class="partido">(PP, PPE)</span></li><li>Maravillas Abadía Jover <span class="partido">(PP, PPE)</span></li><li>Nicolás Pascual De La Parte <span class="partido">(PP, PPE)</span></li><li>Pablo Arias Echeverría <span class="partido">(PP, PPE)</span></li><li>Pilar Del Castillo Vera <span class="partido">(PP, PPE)</span></li><li>Raúl De La Hoz Quintano <span class="partido">(PP, PPE)</span></li><li>Rosa Estaràs Ferragut <span class="partido">(PP, PPE)</span></li><li>Susana Solís Pérez <span class="partido">(PP, PPE)</span></li><li>Alicia Homs Ginel <span class="partido">(PSOE, S&amp;D)</span></li><li>Cristina Maestre <span class="partido">(PSOE, S&amp;D)</span></li><li>César Luena <span class="partido">(PSOE, S&amp;D)</span></li><li>Elena Sancho Murillo <span class="partido">(PSOE, S&amp;D)</span></li><li>Hana Jalloul Muro <span class="partido">(PSOE, S&amp;D)</span></li><li>Idoia Mendia <span class="partido">(PSOE, S&amp;D)</span></li><li>Javier Moreno Sánchez <span class="partido">(PSOE, S&amp;D)</span></li><li>Jonás Fernández <span class="partido">(PSOE, S&amp;D)</span></li><li>José Cepeda <span class="partido">(PSOE, S&amp;D)</span></li><li>Juan Fernando López Aguilar <span class="partido">(PSOE, S&amp;D)</span></li><li>Leire Pajín <span class="partido">(PSOE, S&amp;D)</span></li><li>Marcos Ros Sempere <span class="partido">(PSOE, S&amp;D)</span></li><li>Nicolás González Casares <span class="partido">(PSOE, S&amp;D)</span></li><li>Rosa Serrano Sierra <span class="partido">(PSOE, S&amp;D)</span></li><li>Sandra Gómez López <span class="partido">(PSOE, S&amp;D)</span></li></ul></div><div class="bloque-voto voto-abstention"><h3>Abstención (0)</h3><ul><li>Ninguno</li></ul></div><div class="bloque-voto voto-did_not_vote"><h3>No votó (16)</h3><ul><li>Ana Miranda Paz <span class="partido">(BNG, Verdes/ALE)</span></li><li>Vicent Marzà Ibáñez <span class="partido">(Compromís, Verdes/ALE)</span></li><li>Pernando Barrena Arza <span class="partido">(EH BILDU, La Izquierda)</span></li><li>Diego Solier <span class="partido">(Independiente, ECR)</span></li><li>Nora Junco García <span class="partido">(Independiente, ECR)</span></li><li>Irene Montero <span class="partido">(PODEMOS, La Izquierda)</span></li><li>Isabel Serra Sánchez <span class="partido">(PODEMOS, La Izquierda)</span></li><li>Alma Ezcurra Almansa <span class="partido">(PP, PPE)</span></li><li>Javi López <span class="partido">(PSC-PSOE, S&amp;D)</span></li><li>Laura Ballarín Cereza <span class="partido">(PSC-PSOE, S&amp;D)</span></li><li>Iratxe García Pérez <span class="partido">(PSOE, S&amp;D)</span></li><li>Lina Gálvez <span class="partido">(PSOE, S&amp;D)</span></li><li>Nacho Sánchez Amor <span class="partido">(PSOE, S&amp;D)</span></li><li>Alvise Pérez <span class="partido">(SALF, NI)</span></li><li>Estrella Galán <span class="partido">(SMR, La Izquierda)</span></li><li>Jaume Asens Llodrà <span class="partido">(SMR, Verdes/ALE)</span></li></ul></div></div>
 </section>
 
 <section>
-  <h4>Documentos oficiales</h4>
-  <ul><li><a href="https://www.europarl.europa.eu/doceo/document/B-10-2026-0063_ES.html" target="_blank" rel="noopener">Documento B10-0063/2026</a></li><li><a href="https://oeil.secure.europarl.europa.eu/oeil/es/procedure-file?reference=2026/2002(INS)" target="_blank" rel="noopener">Ficha OEIL</a></li><li><a href="https://howtheyvote.eu/votes/183538" target="_blank" rel="noopener">click aquí</a></li></ul>
+  <h2>Documentos oficiales</h2>
+  <ul><li><a href="https://www.europarl.europa.eu/doceo/document/B-10-2026-0063_ES.html" target="_blank" rel="noopener">Informe o propuesta votada (B10-0063/2026)</a></li><li><a href="https://oeil.secure.europarl.europa.eu/oeil/es/procedure-file?reference=2026/2002(INS)" target="_blank" rel="noopener">Ficha del procedimiento 2026/2002(INS) en el Observatorio Legislativo</a></li><li><a href="https://howtheyvote.eu/votes/183538" target="_blank" rel="noopener">Lista nominal completa de los 720 eurodiputados (HowTheyVote.eu)</a></li></ul>
 </section>
-<nav class="paginacion"><a href="m007.html">← Anterior: Derechos humanos y democracia en el mundo: informe anual 2025</a> <a href="m009.html">Siguiente: Drones y nuevos sistemas de guerra →</a></nav>
+<nav class="paginacion" aria-label="Otras decisiones"><a href="m007.html">← Anterior: Derechos humanos y democracia en el mundo: informe anual 2025</a> <a href="m009.html">Siguiente: Drones y nuevos sistemas de guerra →</a></nav>
 
 </main>
 <footer>
-  <a href="#arriba" class="subir"><img src="bandera-ue.svg" width="30"></a>
+  <a href="#arriba" class="subir">Volver arriba ↑</a>
   <h2>Créditos y licencias</h2>
   <ul>
     <li>Datos de votaciones: <a href="https://howtheyvote.eu" target="_blank" rel="noopener">HowTheyVote.eu (Open Database License, ODbL)</a>, a partir de los resultados oficiales del Parlamento Europeo.</li>
